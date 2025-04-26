@@ -9,7 +9,48 @@ public class Main {
     ErrorPriority priority;
     Date dateOccurred;
     Executor executor;
-    
+    package com.example.calculator;
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private TextView display;
+    private Button button0, button1, button2, button3, button4,
+                   button5, button6, button7, button8, button9,
+                   buttonAdd, buttonSub, buttonMul, buttonDiv,
+                   buttonClear, buttonEqual;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Привязка элементов интерфейса
+        display = findViewById(R.id.textView);
+        button0 = findViewById(R.id.button0);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
+        button7 = findViewById(R.id.button7);
+        button8 = findViewById(R.id.button8);
+        button9 = findViewById(R.id.button9);
+        buttonAdd = findViewById(R.id.buttonAdd);
+        buttonSub = findViewById(R.id.buttonSub);
+        buttonMul = findViewById(R.id.buttonMul);
+        buttonDiv = findViewById(R.id.buttonDiv);
+        buttonClear = findViewById(R.id.buttonClear);
+        buttonEqual = findViewById(R.id.buttonEqual);
+и
+    }
+}
+
     public void setTitle(String title) {
         try {
             if (title == null || title.isEmpty()) {
