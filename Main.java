@@ -42,6 +42,45 @@ public class Main {
             System.err.println("Ошибка при установке приоритета: " + e.getMessage());
         }
     }
+    private double num1 = 0, num2 = 0;
+private String operator = "";
+
+private void clearDisplay() {
+    display.setText("");
+    num1 = 0;
+    num2 = 0;
+    operator = "";
+}
+
+private void calculateResult() {
+    num2 = Double.parseDouble(display.getText().toString());
+
+    double result = 0;
+
+    switch (operator) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                display.setText("Ошибка");
+                return;
+            }
+            break;
+    }
+
+    display.setText(String.valueOf(result));
+    operator = "";
+}
+
 
     public void setDateOccurred(Date dateOccurred) {
         try {
